@@ -1,0 +1,28 @@
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - 2.0.0
+  - 2.1
+  - 2.2
+  - 2.3.1
+  - ruby-head
+  - rbx-2
+  - jruby
+  - jruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby
+    - rvm: jruby-head
+    - rvm: rbx-2
+env:
+  - USE_OFFICIAL_GEM_SOURCE=true
+notifications:
+  recipients:
+    - hl@fir.im
+branches:
+  only:
+    - master
+addons:
+  code_climate:
+    repo_token: 7158bd5d0218441524b8663790dd28edba8a870387ed000a1b56968e3315af2a
